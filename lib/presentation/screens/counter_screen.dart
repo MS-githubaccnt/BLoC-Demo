@@ -27,12 +27,18 @@ class CounterScreen extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
-  //               BlocBuilder<CounterBloc,CounterState>(
-  //                 builder:(context,state){
-  //                 return Text("${state.count}",
-  //                 overflow: TextOverflow.ellipsis,
-  //                 style: TextStyle(fontSize: 200),);
-  // }),
+                //explain why different from normal print statement
+                // BlocListener<CounterBloc,CounterState>(
+                //   listener: (context,state){
+                //     print("New state: ${state.count}");
+                //   },
+                //   child: BlocBuilder<CounterBloc,CounterState>(
+                //     builder:(context,state){
+                //     return Text("${state.count}",
+                //     overflow: TextOverflow.ellipsis,
+                //     style: TextStyle(fontSize: 200),);
+                //     }),
+                // ),
                 SizedBox(width:MediaQuery.of(context).size.width,
                 height: MediaQuery.of(context).size.height/5,),
                 Row(
@@ -50,7 +56,7 @@ class CounterScreen extends StatelessWidget {
                       ))
                     ),),
                     IconButton(onPressed: (){
-                     // context.read<CounterBloc>().add(RemoveOne());
+                   //  context.read<CounterBloc>().add(RemoveOne());
                     },
                     icon: Icon(Icons.remove),
                     iconSize: 60,
